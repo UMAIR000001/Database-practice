@@ -13,9 +13,10 @@ engine = create_engine(DATABASE_URL)
 Base = declarative_base()
 
 class Student(Base):
-    __tablename__ = "latest_student"
+    __tablename__ = "students_info"
     
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    phone = Column(String)
-    Base.metadata.create_all(engine)
+    ID = Column(Integer, primary_key=True)
+    Name = Column(String)
+    Age = Column(String)
+
+Base.metadata.create_all(engine)
